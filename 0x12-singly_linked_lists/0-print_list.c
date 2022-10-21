@@ -10,6 +10,8 @@ size_t print_list(const list_t *h)
 {
 	list_t *tmp = h;
 
+	nelem = 0;
+
 	while(tmp != NULL)
 	{
 		if(h->str == NULL)
@@ -18,8 +20,9 @@ size_t print_list(const list_t *h)
 			printf("[%d] %s\n", h->len, h->str);
 
 		h = h->next;
+		nelem++;
 	};	
 
-	return(0);
+	return(nelem);
 };
 
